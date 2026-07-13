@@ -15,8 +15,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.55)),
-    url("https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=1400&q=80") center/cover no-repeat;
+  background: linear-gradient(rgba(50, 50, 50, 0.7), rgba(200, 200, 200, 0.5)),
+    url("https://champions.pokemon.com/_images/global/header/header-md.jpg") center/cover no-repeat;
   color: #f7f7f7;
 }
 
