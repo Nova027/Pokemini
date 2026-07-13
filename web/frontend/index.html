@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Webpage Template</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div id="view-home" class="page-shell">
+      <header class="hero">
+        <p class="eyebrow">Pokemon Battles</p>
+        <h1>Home</h1>
+        <p class="intro">
+          A lite version of basic Pokemon battles with simplified versions of actual pokemon, and limited mechanics.
+        </p>
+      </header>
+
+      <section class="section-block">
+        <h2>Primary Actions</h2>
+        <div class="button-group" role="navigation" aria-label="Primary actions">
+          <button data-route="/overview">Overview</button>
+          <button data-route="/projects">Projects</button>
+          <button data-route="/contact">Contact</button>
+        </div>
+      </section>
+
+      <section class="section-block">
+        <h2>Secondary Actions</h2>
+        <div class="button-group" role="navigation" aria-label="Secondary actions">
+          <button data-route="/team">Team</button>
+          <button data-route="/battle">Battle</button>
+          <button data-route="/help">Help</button>
+        </div>
+      </section>
+
+      <section class="section-block">
+        <h2>Utility Actions</h2>
+        <div class="button-group" role="navigation" aria-label="Utility actions">
+          <button data-route="/download">Download</button>
+          <button data-route="/settings">Settings</button>
+        </div>
+      </section>
+    </div>
+
+    <div id="view-dynamic" class="dynamic-shell">
+      <div id="dynamic-content"></div>
+    </div>
+
+    <div id="status" class="status" aria-live="polite">
+      Select a button to see a message.
+    </div>
+
+    <script type="module" src="/static/script.js"></script>
+  </body>
+</html>
