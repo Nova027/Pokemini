@@ -5,15 +5,15 @@ export function init(container) {
   container.innerHTML = `
     <section class="section-block">
       <h2>Team</h2>
-      <p>This route is rendered from the team module.</p>
+      <p>This content is loaded from its own route module.</p>
       <div class="card-grid">
         <div class="route-card">
-          <h3>Design</h3>
-          <p>Focused on usability and clarity.</p>
+          <h3>Stats</h3>
+          <p>Quick summary of the current view.</p>
         </div>
         <div class="route-card">
-          <h3>Development</h3>
-          <p>Building the experience behind the scenes.</p>
+          <h3>Next Steps</h3>
+          <p>Use the back button to return home.</p>
         </div>
       </div>
     </section>

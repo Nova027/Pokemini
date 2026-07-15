@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple Webpage Template</title>
+    <title>Pokemini</title>
     <link rel="icon" type="image/png" href="/static/pokeball.png">
     <link rel="stylesheet" href="/static/styles.css" />
   </head>
   <body>
     <div id="view-home" class="page-shell">
       <header class="hero">
-        <p class="eyebrow">Pokemon Battles</p>
+        <p class="eyebrow">PokeMini - Pokemon Battles</p>
         <h1>Home</h1>
         <p class="intro">
           A lite version of basic Pokemon battles with simplified versions of actual pokemon, and limited mechanics.
@@ -18,28 +18,37 @@
       </header>
 
       <section class="section-block">
-        <h2>Primary Actions</h2>
-        <div class="button-group" role="navigation" aria-label="Primary actions">
-          <button data-route="/overview">Overview</button>
-          <button data-route="/projects">Projects</button>
-          <button data-route="/contact">Contact</button>
+        <h2>My Pokemon</h2>
+        <div class="button-group" role="navigation" aria-label="My Pokemon">
+          <button data-route="/team">Build Team</button>
+          <button data-route="/train">Train Team</button>
+          <button data-route="/fetch">Fetch Team by ID</button>
         </div>
       </section>
 
       <section class="section-block">
-        <h2>Secondary Actions</h2>
-        <div class="button-group" role="navigation" aria-label="Secondary actions">
-          <button data-route="/team">Team</button>
-          <button data-route="/battle">Battle</button>
-          <button data-route="/help">Help</button>
+        <h2>Battle</h2>
+        <div class="button-group" role="navigation" aria-label="Battle">
+          <div class="route-card">
+            <h3><button data-route="/lobby">New Battle Room</button></h3>
+            <p>Set up a private Single/Double Battle</p>
+          </div>
+          <div class="route-card">
+            <h3><button data-route="/lobby">Join Battle Room</button></h3>
+            <p>Route modules keep the app organized.</p>
+          </div>
+          <div class="route-card">
+            <h3><button data-route="/battles">Battle Data</button></h3>
+            <p>Route modules keep the app organized.</p>
+          </div>
         </div>
       </section>
 
       <section class="section-block">
-        <h2>Utility Actions</h2>
-        <div class="button-group" role="navigation" aria-label="Utility actions">
-          <button data-route="/download">Download</button>
-          <button data-route="/settings">Settings</button>
+        <h2>More</h2>
+        <div class="button-group" role="navigation" aria-label="More">
+          <button data-route="/settings">None</button>
+          <button data-route="/settings">None</button>
         </div>
       </section>
     </div>
@@ -49,7 +58,7 @@
     </div>
 
     <div id="status" class="status" aria-live="polite">
-      Select a button to see a message.
+      Click a button.
     </div>
 
     <script type="module" src="/static/script.js"></script>

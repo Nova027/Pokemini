@@ -1,11 +1,11 @@
-export const title = 'Contact';
-export const message = 'You selected Contact.';
+export const title = 'Fetch';
+export const message = 'You selected Fetch.';
 
 export function init(container) {
   container.innerHTML = `
     <section class="section-block">
-      <h2>Contact</h2>
-      <p>Contact content is isolated in its own module.</p>
+      <h2>Fetch</h2>
+      <p>Fetch content is isolated in its own module.</p>
       <div class="card-grid">
         <div class="route-card">
           <h3>Email</h3>

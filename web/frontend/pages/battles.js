@@ -1,11 +1,11 @@
-export const title = 'Help';
-export const message = 'You selected Help.';
+export const title = 'Battle';
+export const message = 'You selected Battle.';
 
 export function init(container) {
   container.innerHTML = `
     <section class="section-block">
-      <h2>Help</h2>
-      <p>This help view comes from its own route module.</p>
+      <h2>Battle</h2>
+      <p>This Battle view comes from its own route module.</p>
       <div class="card-grid">
         <div class="route-card">
           <h3>FAQ</h3>

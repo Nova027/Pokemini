@@ -1,10 +1,10 @@
-export const title = 'Projects';
-export const message = 'You selected Projects.';
+export const title = 'Train';
+export const message = 'You selected Train.';
 
 export function init(container) {
   container.innerHTML = `
     <section class="section-block">
-      <h2>Projects</h2>
+      <h2>Train</h2>
       <p>Project details are now loaded from a dedicated route file.</p>
       <div class="card-grid">
         <div class="route-card">

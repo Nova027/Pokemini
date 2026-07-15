@@ -15,7 +15,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  background: linear-gradient(rgba(50, 50, 50, 0.7), rgba(200, 200, 200, 0.5)),
+  background: linear-gradient(rgba(50, 50, 50, 0.9), rgba(200, 200, 200, 0.2)),
     url("https://champions.pokemon.com/_images/global/header/header-md.jpg") center/cover no-repeat;
   color: #f7f7f7;
 }

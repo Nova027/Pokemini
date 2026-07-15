@@ -4,15 +4,12 @@ const dynamicView = document.getElementById('view-dynamic');
 const contentArea = document.getElementById('dynamic-content');
 
 const routes = {
-  '/overview': './pages/overview.js',
-  '/projects': './pages/projects.js',
-  '/contact': './pages/contact.js',
   '/team': './pages/team.js',
-  '/battle': './pages/battle.js',
-  '/help': './pages/help.js',
-  '/download': './pages/download.js',
-  '/settings': './pages/settings.js',
-  '/lobby': './pages/lobby.js'
+  '/train': './pages/train.js',
+  '/fetch': './pages/fetch.js',
+  '/battles': './pages/battles.js',
+  '/lobby': './pages/lobby.js',
+  '/settings': './pages/unknown.js'
 };
 
 async function router() {
