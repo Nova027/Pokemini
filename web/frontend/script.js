@@ -1,4 +1,3 @@
-const status = document.getElementById('status');
 const homeView = document.getElementById('view-home');
 const dynamicView = document.getElementById('view-dynamic');
 const contentArea = document.getElementById('dynamic-content');
@@ -19,7 +18,6 @@ async function router() {
     homeView.style.display = 'grid';
     dynamicView.style.display = 'none';
     contentArea.innerHTML = '';
-    status.textContent = 'Select a button to see a message.';
     return;
   }
 
@@ -36,18 +34,18 @@ async function router() {
   try {
     const pageModule = await import(routePath);
     pageModule.init(contentArea);
-    status.textContent = pageModule.message || 'Route loaded.';
     document.title = `${pageModule.title || 'Page'} | Simple Webpage Template`;
-  } catch (error) {
+  }
+  catch (error) {
     contentArea.innerHTML = '<p class="error-text">Error loading the page. Try again.</p>';
-    status.textContent = 'There was a problem loading this route.';
     console.error(error);
   }
 }
 
 document.addEventListener('click', (event) => {
   const trigger = event.target.closest('[data-route]');
-  if (!trigger) return;
+  if (!trigger)
+    return;
 
   const targetPath = trigger.getAttribute('data-route');
   window.location.hash = targetPath === '/' ? '' : targetPath;
