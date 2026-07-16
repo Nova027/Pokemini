@@ -20,17 +20,14 @@ body {
   color: #f7f7f7;
 }
 
-.page-shell,
-.dynamic-shell {
-  width: min(92vw, 760px);
-}
-
 .page-shell {
+  width: min(92vw, 990px);
   display: grid;
   gap: 16px;
 }
 
 .dynamic-shell {
+  width: min(92vw, 1260px);
   display: none;
 }
 

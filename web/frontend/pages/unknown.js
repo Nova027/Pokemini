@@ -5,7 +5,6 @@ export function init(container) {
   container.innerHTML = `
     <section class="section-block">
       <h2>Settings</h2>
-      <p>Settings state is now managed per-route.</p>
       <div class="card-grid">
         <div class="route-card">
           <h3>Preferences</h3>

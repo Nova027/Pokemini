@@ -5,7 +5,6 @@ export function init(container) {
   container.innerHTML = `
     <section class="section-block">
       <h2>Team</h2>
-      <p>This content is loaded from its own route module.</p>
       <div class="card-grid">
         <div class="route-card">
           <h3>Stats</h3>

@@ -5,7 +5,6 @@ export function init(container) {
   container.innerHTML = `
     <section class="section-block">
       <h2>Fetch</h2>
-      <p>Fetch content is isolated in its own module.</p>
       <div class="card-grid">
         <div class="route-card">
           <h3>Email</h3>

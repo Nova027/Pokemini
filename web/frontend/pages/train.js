@@ -5,7 +5,6 @@ export function init(container) {
   container.innerHTML = `
     <section class="section-block">
       <h2>Train</h2>
-      <p>Project details are now loaded from a dedicated route file.</p>
       <div class="card-grid">
         <div class="route-card">
           <h3>Battle Engine</h3>
