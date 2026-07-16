@@ -9,7 +9,7 @@
   </head>
   <body>
     <div id="view-home" class="page-shell">
-      <header class="hero">
+      <header class="home-header">
         <p class="eyebrow">PokeMini - Pokemon Battles</p>
         <h1>Home</h1>
         <p class="intro">
@@ -20,9 +20,18 @@
       <section class="section-block">
         <h2>My Pokemon</h2>
         <div class="button-group" role="navigation" aria-label="My Pokemon">
-          <button data-route="/team">Build Team</button>
-          <button data-route="/train">Train Team</button>
-          <button data-route="/fetch">Fetch Team by ID</button>
+          <div class="route-card">
+            <h3><button data-route="/team">Build Team</button></h3>
+            <p>Recruit a team of six pokemon.</p>
+          </div>
+          <div class="route-card">
+            <h3><button data-route="/lobby">Train Team</button></h3>
+            <p>Train one of your pokemon teams.</p>
+          </div>
+          <div class="route-card">
+            <h3><button data-route="/battles">Fetch Team by ID</button></h3>
+            <p>Fetch a(n) (un)trained team from the server by ID.</p>
+          </div>
         </div>
       </section>
 
@@ -31,15 +40,15 @@
         <div class="button-group" role="navigation" aria-label="Battle">
           <div class="route-card">
             <h3><button data-route="/lobby">New Battle Room</button></h3>
-            <p>Set up a private Single/Double Battle</p>
+            <p>Set up a private Single/Double Battle Room.</p>
           </div>
           <div class="route-card">
             <h3><button data-route="/lobby">Join Battle Room</button></h3>
-            <p>Route modules keep the app organized.</p>
+            <p>Join an existing Battle Room to start battle.</p>
           </div>
           <div class="route-card">
             <h3><button data-route="/battles">Battle Data</button></h3>
-            <p>Route modules keep the app organized.</p>
+            <p>Battle history and statistics.</p>
           </div>
         </div>
       </section>
