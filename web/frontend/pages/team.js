@@ -10,15 +10,7 @@ export async function init(container) {
   container.innerHTML = `
     <section class="section-block">
       <h2>Team</h2>
-      <div class="card-grid">
-        <div class="route-card">
-          <h3>Stats</h3>
-          <p>Quick summary of the current view.</p>
-        </div>
-        <div class="route-card">
-          <h3>Next Steps</h3>
-          <p>Use the back button to return home.</p>
-        </div>
+      <div id="team-lists">
       </div>
     </section>
     <div class="dashboard-layout">
@@ -30,18 +22,50 @@ export async function init(container) {
       </div>
     </div>
   `;
+
+  let data = null;
+  try {
+    // 2. Fetch the user-specific data from backend.
+    // The browser attaches cookie here to identify the user.
+    const response = await fetch(
+      '/pokemonList/get_team', {credentials: 'same-origin'}
+    );
+    if (!response.ok)
+      throw new Error('Failed to fetch data');
+    
+    data = await response.json();
+  }
+  catch (error) {
+    console.error("Failed to load page data:", error);
+    container.innerHTML = '<p class="error-text">Could not load your team data.</p>';
+  }
+
+  if (data && data['team-list']) {
+    const teamCardsDom = document.getElementById('team-lists');
+    let teamsContent = '';
+    for (const teamId of data['team-list']) {
+      const teamMembers = data[teamId] || [];
+      teamsContent += `<div class='card-grid'>`;
+      for (const member of teamMembers) {
+        // teamsContent += `<img src="path/to/${member}.png" alt="${member}Img" class="item-image">`;
+        teamsContent += `<div class="route-card"> <p class="item-text">${member}</p> </div>`;
+      }
+      teamsContent += `</div>`;
+    }
+    teamCardsDom.innerHTML = teamsContent;
+  }
   
   const pokemonListDom = document.getElementById('available-pokemon');
-  let listContent = '';
+  let pokemonListContent = '';
   for (const pokemon of pokemonList) {
-    listContent += `
+    pokemonListContent += `
       <div class="grid-item">
         <img src="path/to/${pokemon}.png" alt="${pokemon}Img" class="item-image">
         <p class="item-text">${pokemon}</p>
       </div>
     `;
   }
-  pokemonListDom.innerHTML = listContent;
+  pokemonListDom.innerHTML = pokemonListContent;
 
   // try {
   //   // 2. Fetch the user-specific data from FastAPI
