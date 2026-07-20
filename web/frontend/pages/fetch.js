@@ -1,7 +1,7 @@
 export const title = 'Fetch';
 export const message = 'You selected Fetch.';
 
-export function init(container) {
+export async function init(container) {
   container.innerHTML = `
     <section class="section-block">
       <h2>Fetch</h2>

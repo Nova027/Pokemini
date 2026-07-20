@@ -1,7 +1,7 @@
 export const title = 'Train';
 export const message = 'You selected Train.';
 
-export function init(container) {
+export async function init(container) {
   container.innerHTML = `
     <section class="section-block">
       <h2>Train</h2>

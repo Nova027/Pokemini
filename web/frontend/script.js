@@ -38,7 +38,7 @@ async function router() {
   try {
     // Dynamic loading of relevant page module data corresponding to route path.
     const pageModule = await import(routePath);
-    pageModule.init(contentArea);
+    await pageModule.init(contentArea);
     document.title = `${pageModule.title || 'Page'} | ${docTitle}`;
   }
   catch (error) {

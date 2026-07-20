@@ -1,7 +1,7 @@
 export const title = 'Settings';
 export const message = 'You selected Settings.';
 
-export function init(container) {
+export async function init(container) {
   container.innerHTML = `
     <section class="section-block">
       <h2>Settings</h2>
